@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Challenge</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="page-header">feedback form</header>
+<main>
+    <form action="https://echo.htmlacademy.ru/courses" method="post" oninput="outputrating.value=rating.value">
+        <fieldset>
+            <legend>private data</legend>
+            <div class="half-width">
+                <label for="id" >ID review</label>
+                <input type="text" name="id" id="id" value="12345" disabled>
+            </div>
+            <div class="half-width">
+                <label for="name">Name</label>
+                <input type="text" name="name_traveller" id="name" value="Кекс">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Review trip</legend>
+            <div class="half-width">
+                <label for="country">Country</label>
+                <input type="text" name="name_country" id="country" value="Norway">
+            </div>
+            <div class="half-width">
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="Oslo">Oslo</option>
+                </select>
+            </div>
+
+            <div class="half-width">
+                <label for="rating">rating</label>
+                0 <input type="range" min="1" max="10" step="1" name="mark of trip" id="rating" value="10"> 10
+            </div>
+
+            <div class="half-width output-area">
+                <output name="outputrating">10</output>
+            </div>
+
+            <label for="review">Text review</label>
+            <textarea name="text-rewiev" id="review" rows="5">Text review
+        </textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Hotel rate</legend>
+            <div class="half-width">
+                <label for="hotel">Hotel name</label>
+                <input type="text" id="hotel" name="hotel" placeholder="in English" >
+            </div>
+            <div class="half-width">
+                <label for="arrival_date">Arrival date</label>
+                <input type="text" id="arrival_date" name="arrival_date" placeholder="dd-mm-yyyy" >
+            </div>
+            <div class="one-third-width">
+                <label for="color">Color bed</label>
+                <input type="color" id="color" value="#ff0000">
+            </div>
+            <div class="two-third-width">
+                <label for="dish_rating">Dinner rate</label>
+                <select name="dish_rating" id="dish_rating">
+                    <option value="Excellent">Excellent</option>
+                </select>
+            </div>
+            <label for="fish">the most delicious fish</label>
+            <select name="fish[]" id="fish"  size="10" multiple>
+                <option value="salmon" selected>salmonь</option>
+                <option value="catfish">catfish</option>
+                <option value="sea bass" selected>sea bass</option>
+                <option value="crucian carp">crucian carp</option>
+                <option value="mirror carp">mirror carp</option>
+            </select>
+        </fieldset>
+        <div class="buttons">
+            <input type="submit" value="Estimate">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</main>
+<footer class="page-footer"></footer>
+</body>
+</html>
